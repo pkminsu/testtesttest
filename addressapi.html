@@ -17,8 +17,11 @@
                                 // 예제를 참고하여 다양한 활용법을 확인해 보세요.
                                 
                                 if (data.userSelectedType === 'R') {
-                                        window.external.CallMessage();
-                                        window.external.CallForm(data.zonecode, data.address);
+                                    window.external.CallMessage();
+                                    window.external.CallForm(data.zonecode, data.address);
+                                }
+                                else {
+                                    window.external.CallMessage();
                                 }
                                 
                                 var addr = ''; // 주소 변수
