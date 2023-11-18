@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Test Page</title>
+	<script type="text/javascript">
+		function submitToForm()
+		{
+			var textboxvalue = document.getElementById('text1').value;
+			window.external.CallForm1(textboxvalue);
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="text1" name="text1"></input>
+		<input type="button" id="btn1" name="btn1" value="submit" onclick="submitToForm()"></input>
+	</form>
+</body>
+</html>
