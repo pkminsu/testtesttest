@@ -8,9 +8,15 @@
     <!-- 주소 검색 -->
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
-      if (window.external) {
-        window.external.CallForm(data.zonecode, data.address);
-      }
+        $(document).ready(function () {
+            showzip = function () {
+                var element_layer = document.getElementById('layer');
+                if (window.external) {
+                    window.external.CallForm(data.zonecode, data.address);
+                }
+            }
+            showzip()
+        })
     </script>
 </head>
 <body>
