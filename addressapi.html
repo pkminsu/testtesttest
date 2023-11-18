@@ -15,15 +15,10 @@
                             oncomplete: function (data) {
                                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
                                 // 예제를 참고하여 다양한 활용법을 확인해 보세요.
-                                window.external.CallMessage();
-                                if (data.userSelectedType === 'R') {
-                                    window.external.CallMessage();
+                                if (window.external) {
                                     window.external.CallForm(data.zonecode, data.address);
                                 }
-                                else {
-                                    window.external.CallMessage();
-                                }
-                                
+    
                                 var addr = ''; // 주소 변수
                                 var extraAddr = ''; // 참고항목 변수
 
