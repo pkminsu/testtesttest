@@ -5,7 +5,7 @@
 		function submitToForm()
 		{
 			var textboxvalue = document.getElementById('text1').value;
-			window.external.CallForm1(textboxvalue);
+			chrome.webview.postMessage("hello wpf");
 		}
 	</script>
 </head>
