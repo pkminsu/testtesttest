@@ -13,7 +13,7 @@
                         var element_layer = document.getElementById('layer');
                         new daum.Postcode({
                             oncomplete: function (data) {
-                                
+                                window.chrome.webview.postMessage(data.address);
                             }
                         }).embed(element_layer);
                     }
