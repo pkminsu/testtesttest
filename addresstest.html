@@ -19,7 +19,7 @@
                                 } else {
                                     addr = data.jibunAddress;
                                 }                               
-                                window.chrome.webview.postMessage(String(addr + " : " + data.zonecode);
+                                window.chrome.webview.postMessage(addr + data.zonecode);
                             }
                         }).embed(element_layer);
                     }
