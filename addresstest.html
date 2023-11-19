@@ -13,16 +13,14 @@
                         var element_layer = document.getElementById('layer');
                         new daum.Postcode({
                             oncomplete: function (data) {
-                                oncomplete: function (data) {
-                                    var addr = '';
-                                    if (data.userSelectedType === 'R') {
-                                        addr = data.roadAddress;
-                                    } else {
-                                        addr = data.jibunAddress;
-                                    }
-                                    string address1 = String(addr) + ' ' + String(data.zonecode);
-                                    window.chrome.webview.postMessage(address1);
+                                var addr = '';
+                                if (data.userSelectedType === 'R') {
+                                    addr = data.roadAddress;
+                                } else {
+                                    addr = data.jibunAddress;
                                 }
+                                string address1 = String(addr) + ' ' + String(data.zonecode);
+                                window.chrome.webview.postMessage(address1);
                             }
                         }).embed(element_layer);
                     }
